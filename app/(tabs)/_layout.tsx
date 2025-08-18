@@ -1,14 +1,11 @@
-import { Tabs } from "expo-router";
-import React from "react";
-import { Platform } from "react-native";
 import { HapticTab } from "@/components/HapticTab";
 import { Colors } from "@/constants/Colors";
 import { useColorScheme } from "@/hooks/useColorScheme";
+import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import { BlurView } from "expo-blur";
-import { RiHome7Fill } from "react-icons/ri";
-import { TiThMenu } from "react-icons/ti";
-import { IoPersonSharp } from "react-icons/io5";
-import { IoMdSettings } from "react-icons/io";
+import { Tabs } from "expo-router";
+import React from "react";
+import { Platform } from "react-native";
 
 
 export default function TabLayout() {
@@ -53,11 +50,11 @@ export default function TabLayout() {
           },
           ios: {
             position: "absolute",
-            bottom: 15,
-            left: 15,
-            right: 15,
-            height: 65,
-            borderRadius: 24,
+            bottom: 0,
+            left: 0,
+            right: 0,
+            height: 85,
+            borderRadius: 0,
             overflow: "hidden",
             borderTopWidth: 0,
             shadowColor: "#000",
@@ -82,14 +79,18 @@ export default function TabLayout() {
         name="index"
         options={{
           title: "Home",
-          tabBarIcon: ({ color }) => <RiHome7Fill size={24} color={color} />,
+          tabBarIcon: ({ color }) => (
+            <MaterialIcons name="home" size={24} color={color} />
+          ),
         }}
       />
       <Tabs.Screen
         name="menu"
         options={{
           title: "Menu",
-          tabBarIcon: ({ color }) => <TiThMenu size={24} color={color} />,
+          tabBarIcon: ({ color }) => (
+            <MaterialIcons name="menu" size={24} color={color} />
+          ),
         }}
       />
 
@@ -97,14 +98,18 @@ export default function TabLayout() {
         name="profile"
         options={{
           title: "Profile",
-          tabBarIcon: ({ color }) => <IoPersonSharp size={24} color={color} />,
+          tabBarIcon: ({ color }) => (
+            <MaterialIcons name="person" size={24} color={color} />
+          ),
         }}
       />
       <Tabs.Screen
         name="setting"
         options={{
           title: "Setting",
-          tabBarIcon: ({ color }) => <IoMdSettings size={24} color={color} />,
+          tabBarIcon: ({ color }) => (
+            <MaterialIcons name="settings" size={24} color={color} />
+          ),
         }}
       />
     </Tabs>

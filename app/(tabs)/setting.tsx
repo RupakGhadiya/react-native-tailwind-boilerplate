@@ -1,10 +1,7 @@
 import NotificationsTab from "@/components/setting-component/NotificationsTab";
 import SecurityTab from "@/components/setting-component/SecurityTab";
 import React, { useState } from "react";
-import { View, Text, ScrollView, TouchableOpacity } from "react-native";
-import { IoNotifications } from "react-icons/io5";
-import { MdSecurity } from "react-icons/md";
-import { FaDatabase } from "react-icons/fa6";
+import { ScrollView, Text, TouchableOpacity, View } from "react-native";
 
 import DataManagementTab from "@/components/setting-component/DataManagementTab";
 
@@ -15,13 +12,11 @@ const SettingsScreen = () => {
     {
       id: "notifications",
       label: "Notifications",
-      icon: <IoNotifications size={22} />,
     },
-    { id: "security", label: "Security", icon: <MdSecurity size={22} /> },
+    { id: "security", label: "Security" },
     {
       id: "datamanage",
       label: "Data Management",
-      icon: <FaDatabase size={22} />,
     },
   ];
 
@@ -39,7 +34,7 @@ const SettingsScreen = () => {
   };
 
   return (
-    <View className="py-2 px-1">
+    <View className="py-2 px-1 mt-[40px]">
       {/* Horizontal Tab Bar */}
       <Text className="ml-2 mb-1 text-text1 text-[32px] font-extrabold">Settings</Text>
       <Text className="ml-2 mb-5 text-text2 text-[14px] font-semibold">Manage your account preferences</Text>
