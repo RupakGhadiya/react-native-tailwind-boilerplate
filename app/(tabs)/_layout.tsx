@@ -6,6 +6,8 @@ import { BlurView } from "expo-blur";
 import { Tabs } from "expo-router";
 import React from "react";
 import { Platform } from "react-native";
+import Fontisto from '@expo/vector-icons/Fontisto';
+import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 
 
 export default function TabLayout() {
@@ -80,7 +82,7 @@ export default function TabLayout() {
         options={{
           title: "Home",
           tabBarIcon: ({ color }) => (
-            <MaterialIcons name="home" size={24} color={color} />
+            <FontAwesome5 name="home" size={24} color={color} />
           ),
         }}
       />
@@ -93,13 +95,12 @@ export default function TabLayout() {
           ),
         }}
       />
-
       <Tabs.Screen
         name="profile"
         options={{
           title: "Profile",
           tabBarIcon: ({ color }) => (
-            <MaterialIcons name="person" size={24} color={color} />
+            <Fontisto name="person" size={24} color={color} />
           ),
         }}
       />
